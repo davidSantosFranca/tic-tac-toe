@@ -29,7 +29,7 @@ export default class Game extends React.Component {
           key={step} 
           move={move} 
           step={step} 
-          className={this.state.stepNumber === step ? 'selected' : ''} 
+          className={this.state.stepNumber === step ? 'clickable-div selected' : 'clickable-div unselected'} 
           onClick = {this.jumpTo}/>
       )
     })
@@ -58,7 +58,7 @@ export default class Game extends React.Component {
             <TextDiv 
               text={this.state.ascOrder ? "▲ Asc" : "▼ Desc"}
               onClick = {()=>this.setState({ascOrder: !this.state.ascOrder})}
-              className = "text-div"
+              className= "clickable-div"
             />
             <ol reversed={!ascOrder}>{moves}</ol>
           </div>

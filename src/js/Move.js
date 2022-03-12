@@ -8,15 +8,15 @@ export function Move(props) {
     'Game start!';
   return (
     <li
-      key={move}
+      key={step}
       className={props.className}
     >
-      <button
-        id={move}
+      <div
+        id={"move-div-"+step}
         className={props.className}
         onClick={() => props.onClick(step)}
       >
         {desc}
-      </button>
+      </div>
     </li>);
 }
