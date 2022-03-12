@@ -45,22 +45,25 @@ export default class Game extends React.Component {
     const moves = this.renderMoves(history, ascOrder);
 
     return (
-      <div className="game">
-        <div className="game-board">
-          <Board
-            squares={current.squares}
-            winnerSquares = {winner[1]}
-            onClick={(i) => this.handleClick(i)} />
-        </div>
-        <div className="game-info">
-          <div><h2>{status}</h2></div>
-          <div>
-            <TextDiv 
-              text={this.state.ascOrder ? "▲ Asc" : "▼ Desc"}
-              onClick = {()=>this.setState({ascOrder: !this.state.ascOrder})}
-              className= "clickable-div"
-            />
-            <ol reversed={!ascOrder}>{moves}</ol>
+      <div>
+        <div class="tilte"><h2>TIC-TAC-TOE</h2></div>
+        <div className="game">
+          <div className="game-board">
+            <Board
+              squares={current.squares}
+              winnerSquares = {winner[1]}
+              onClick={(i) => this.handleClick(i)} />
+          </div>
+          <div className="game-info">
+            <div><h2>{status}</h2></div>
+            <div>
+              <TextDiv 
+                text={this.state.ascOrder ? "▲ Asc" : "▼ Desc"}
+                onClick = {()=>this.setState({ascOrder: !this.state.ascOrder})}
+                className= "clickable-div"
+              />
+              <ol reversed={!ascOrder}>{moves}</ol>
+            </div>
           </div>
         </div>
       </div>
@@ -100,7 +103,7 @@ export default class Game extends React.Component {
     if (calculateWinner(squares)[0] || squares[i]) {
       return;
     }
-    squares[i] = this.state.xIsNext ? 'X' : 'O';
+    squares[i] = this.state.xIsNext ? '✖' : '◯';
 
     this.setState({
       history: history.concat([{

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/index.css';
-import './css/responsiviness.css';
+import './css/index.scss';
+import './css/responsiviness.scss';
 import Game from "./js/Game";
 // ========================================
 

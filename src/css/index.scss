@@ -5,6 +5,14 @@ body {
 ol, ul {
   padding-left: 30px;
 }
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h2{
+  @include center;
+}
 
 .board-row::after {
   clear: both;

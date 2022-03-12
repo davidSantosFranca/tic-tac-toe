@@ -1,8 +1,12 @@
 @media only screen and (max-width:490px) {
   .game {
+        align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  h2{
+    min-width: 165px;
   }
 }
